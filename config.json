@@ -1,0 +1,5 @@
+{
+	"token": "process.env.TOKEN",
+	"prefix": "-",
+	"youtube_api_key": "process.env.YTB"
+}
