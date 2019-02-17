@@ -121,7 +121,7 @@ playSong(msg) {
             try {
                 let queueString = '';
                 for (let i = 0; i < this.queue.length && i < 15; i++)
-                    queueString += `${i + 1}. ${this.queue[i].title} (\`${this.queue[i].time}\`) demandé par ${this.queue[i].author}\n`;
+                    queueString += `${i + 1}. ${this.queue[i].title} `;
                 if (this.queue.length > 15)
                     queueString += `\nand ${this.queue.length - 15} more.`;
                 msg.channel.send(queueString, {
