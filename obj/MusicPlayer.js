@@ -159,7 +159,7 @@ playSong(msg) {
                       },
                       {
                         name: `Now Playing`,
-                        url: `${this.queue[0].thumbnail}`
+                        value: `${this.queue[0].thumbnail}`
                       }], 
                     timestamp: new Date(),
                     footer: {
