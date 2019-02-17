@@ -156,10 +156,11 @@ playSong(msg) {
                     fields: [{
                         name: `:notes: Lecture en cours `,
                         value: `[${this.queue[0].title}]`+`(${this.queue[0].url}) (\`${this.queue[0].time}\`) demandé par **${this.queue[0].author}**`
-                      }],
-                    thumbnail: {
+                      },
+                      {
+                        name: `Now Playing`,
                         url: `${this.queue[0].thumbnail}`
-                    },
+                      }], 
                     timestamp: new Date(),
                     footer: {
                       icon_url: msg.author.avatarURL,
