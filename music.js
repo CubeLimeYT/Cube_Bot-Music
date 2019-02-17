@@ -1,5 +1,6 @@
 'use strict';
 const config = require('./config.json');
+const youtube_api_key = process.env.YTB;
 const tool = require('./tool.js')
 const ytdl = require('ytdl-core')
 const ySearch = require("youtube-search");
@@ -90,7 +91,7 @@ function processInput(msg, guild) {
 function processSearch(msg, guild, searchQuery) {
 const opts = {
     maxResults: 3,
-    key: config.youtube_api_key
+    key: youtube_api_key
 };
     ySearch(searchQuery, opts, function (err, results) {
         if (err) {
