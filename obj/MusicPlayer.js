@@ -116,12 +116,12 @@ playSong(msg) {
     /*
     Prints the queue.
     */
-    printQueue(msg) {
+	printQueue(msg) {
         if (this.queue.length > 0) {
             try {
                 let queueString = '';
                 for (let i = 0; i < this.queue.length && i < 15; i++)
-                    queueString += `${i + 1}. ${this.queue[i].title} `;
+                    queueString += `${i + 1}. ${this.queue[i].title} (\`${this.queue[i].time}\`) demandé par ${this.queue[i].author}\n`;
                 if (this.queue.length > 15)
                     queueString += `\nand ${this.queue.length - 15} more.`;
                 msg.channel.send(queueString, {
@@ -130,11 +130,11 @@ playSong(msg) {
             } catch (err) {
                 console.log('ERROR CAUGHT:\n' + err);
                 msg.channel.send(
-                    `${tool.inaError} Je ne peux pas afficher la file d'attente maintenant. Réessayez dans quelques instants.`
+                    `${tool.inaError} Je ne peux pas afficher la queue maintenant. Réessayez dans quelques instants.`
                 );
             }
         } else {
-            msg.channel.send(`Il n'y a pas de musique dans la file d'attente!`);
+            msg.channel.send(`Il n'y a pas de musique dans la file d'attente!!`);
         }
     }
 
