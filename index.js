@@ -19,6 +19,7 @@ bot.on('ready',() => {
 });
 
 bot.on('message', msg => {
+
 	if(msg.author.bot || msg.channel.type != 'text')
 		return;
 
